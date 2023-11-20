@@ -1,15 +1,17 @@
 {
-    "version": 1,
+    "version": 2,
     "build": [
         {
             "src": "cafeteriaDev/wsgi.py",
             "use": "@vercel/python",
-            "confi":{"maxLambdaSize": "15mb", "runtime": "python3.11"}
+            "config":{"maxLambdaSize": "15mb", "runtime": "python3.9"}
         },
         {
             "src": "build_files.sh",
             "use": "@vercel/static-build",
-            "confi":{"distDir": "staticfiles_build"}
+            "config":{
+                "distDir": "staticfiles_build"
+            }
         }
     ],
     "routes": [
