@@ -1,5 +1,5 @@
 echo " BUILD START..."
-#pip install -r requirements.txt
+pip install -r requirements.txt
 
 echo " MAKE Migration..."
 python3.9 manage.py makemigrations --noinput 
